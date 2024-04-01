@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "lab-tools"
+version = "0.1.0"
+description = ""
+authors = []
+readme = "README.md"
+packages = [{ include = "volumetry", from = "src" }]
+
+[tool.poetry.scripts]
+lab-tools = "volumetry.main:cli"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+typer = { extras = ["all"], version = "*" }
+pandas = "^2.2.0"
+plotly = "^5.14.1"
+ipykernel = "^6.29.0"
+nbformat = "^5.9.2"
+nbclient = "^0.9.0"
+jupyterlab-quarto = "^0.2.8"
+jupyter = "^1.0.0"
+scipy = "1.11.4"
+seaborn = "0.12.2"
+ydata-profiling = { extras = ["notebook"], version = "^4.6.5" }
+pyqt5 = "^5.15.10"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# Pytest options
+[tool.pytest.ini_options]
+addopts = "--disable-pytest-warnings"
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
