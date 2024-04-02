@@ -3,19 +3,20 @@
 ## Usage
 
 ```bash
-python makeplots.py [COMMAND] --[OPTIONS]
+python src/makeplots.py [COMMAND] --[OPTIONS]
 ```
 
-# To process a single file
+# To process all folders with default base path `data`
 
 ```bash
-python makeplots.py file --file-path data/<file>.txt
+python src/makeplots.py
 ```
 
-# To process all folders in a given base path
+# To process all folders with a different path
 
 ```bash
-python makeplots.py folder --base-path data/
+python src/makeplots.py --base-path /your/custom/path
+
 ```
 
 ## Structure
