@@ -17,8 +17,10 @@ class PlotGenerator:
             folder_path: The path to the folder where the plot will be saved.
             mouse_id: The ID of the mouse, used for naming the plot file.
         """
+
+        sorted_data_frames = data_frames.sort_values(by='Timepoint')
         plt.figure(figsize=(10, 6))
-        sns.lineplot(data=data_frames, x='BinCal', y='Perc_Area', hue='Timepoint', marker='o', style='Timepoint', dashes=False)
+        sns.lineplot(data=sorted_data_frames, x='BinCal', y='Perc_Area', hue='Timepoint', marker='o', style='Timepoint', dashes=False)
         
         plt.xlabel('BinCal')
         plt.ylabel('Perc_Area')
