@@ -40,3 +40,4 @@ class FolderProcessor:
         if data_frames:
             merged_df = pd.concat(data_frames, ignore_index=True)
             PlotGenerator.generate(merged_df, self.folder_path, mouse_id)
+            PlotGenerator.generate_cumulative(merged_df, self.folder_path, mouse_id)
