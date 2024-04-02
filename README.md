@@ -2,11 +2,11 @@
 
 ## Usage
 
-# To process a single file
-
 ```bash
 python makeplots.py [COMMAND] --[OPTIONS]
 ```
+
+# To process a single file
 
 ```bash
 python makeplots.py file --file-path data/<file>.txt
